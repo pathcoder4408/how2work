@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<rolemap>
+    <roles>
+        <role name="Supervisor" />
+        <role name="Worker" />
+    </roles>
+    <permissions>
+        <permission name="plone.AddPortalContent" acquire="True">
+            <role name="Manager"/>
+            <role name="Supervisor"/>
+        </permission>
+        <permission name="plone.app.controlpanel.AccessControlPanel" acquire="False">
+            <role name="Supervisor"/>
+        </permission>
+    </permissions>
+</rolemap>
