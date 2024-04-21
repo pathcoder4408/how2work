@@ -1,6 +1,18 @@
 <?xml version="1.0"?>
 <object name="portal_workflow" meta_type="Plone Workflow Tool">
   <object name="work_order_workflow" meta_type="DCWorkflow">
-    ...
+    <state_variable value="review_state"/>
+    <states>
+      <state name="created" title="Created">
+        ...
+      </state>
+      ...
+    </states>
+    <transitions>
+      <transition name="assign" title="Assign">
+        ...
+      </transition>
+      ...
+    </transitions>
   </object>
 </object>
