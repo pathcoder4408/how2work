@@ -1,20 +1,20 @@
 from setuptools import setup, find_packages
 
-version = '1.0'
-
 setup(
     name='plone_work_orders',
-    version=version,
-    description="Plone add-on for managing work orders with SMS and Email notifications",
+    version='1.0',
+    description="Manage work orders in Plone with notifications and calendar views",
+    long_description=(open("README.md").read() + "\n" +
+                      open("CHANGES.md").read()),
     classifiers=[
         "Framework :: Plone",
         "Programming Language :: Python",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
-    keywords='Plone Python',
+    keywords='Plone Python Work Orders Management',
     author='Your Name',
     author_email='your.email@example.com',
-    url='http://www.example.com',
+    url='http://www.yourwebsite.com',
     license='GPL',
     packages=find_packages(exclude=['ez_setup']),
     namespace_packages=['plone_work_orders'],
@@ -23,10 +23,13 @@ setup(
     install_requires=[
         'setuptools',
         'plone.api>=1.8.4',
-        'Twilio',  # Ensure you have this added for SMS functionalities
+        'twilio',
+        'plone.app.dexterity',
+        'plone.app.relationfield',
+        'plone.app.event'
     ],
     entry_points="""
-    [z3c.autoinclude.plugin]
-    target = plone
+        [z3c.autoinclude.plugin]
+        target = plone
     """,
 )
