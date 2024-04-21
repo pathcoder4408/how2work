@@ -8,6 +8,16 @@
       <Description>A detailed description of the duties involved.</Description>
       <Required>True</Required>
     </Field>
+    <Field name="start_date" type="zope.schema.Datetime">
+      <Title>Start Date</Title>
+    </Field>
+    <Field name="end_date" type="zope.schema.Datetime">
+      <Title>End Date</Title>
+    </Field>
+    <Field name="recurrence" type="plone.app.event.dx.behaviors.IRecurrence">
+      <Title>Recurrence</Title>
+    </Field>
+
     ...
   </Schema>
 </Model>
