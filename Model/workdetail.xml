@@ -1,0 +1,29 @@
+<Model xmlns="http://namespaces.plone.org/supermodel/schema">
+  <Schema>
+    <Field name="detail_description" type="plone.app.textfield.RichText">
+      <Title>Detail Description</Title>
+      <Description>Describe the task detail here.</Description>
+      <Required>True</Required>
+    </Field>
+    <Field name="time_spent" type="zope.schema.Float">
+      <Title>Time Spent</Title>
+      <Description>Time spent on the task, in hours.</Description>
+      <Required>True</Required>
+    </Field>
+    <Field name="completion_date" type="zope.schema.Date">
+      <Title>Completion Date</Title>
+      <Description>Date when the task was completed.</Description>
+      <Required>True</Required>
+    </Field>
+    <Field name="additional_notes" type="plone.app.textfield.RichText">
+      <Title>Additional Notes</Title>
+      <Description>Any additional notes, observations, or comments.</Description>
+      <Required>False</Required>
+    </Field>
+    <Field name="photos" type="plone.namedfile.field.NamedBlobImage">
+      <Title>Photo</Title>
+      <Description>Upload photos related to the task.</Description>
+      <Required>False</Required>
+    </Field>
+  </Schema>
+</Model>
