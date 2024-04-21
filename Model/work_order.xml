@@ -19,6 +19,14 @@
     <Field name="recurrence" type="plone.app.event.dx.behaviors.IRecurrence">
       <Title>Recurrence</Title>
     </Field>
+    <Field name="work_details" type="plone.app.relationfield.RelationList">
+      <Title>Work Details</Title>
+       <Description>Details of work performed on this order.</Description>
+         <value_type type="plone.app.relationfield.RelationChoice">
+          <portal_type>WorkDetail</portal_type>
+         </value_type>
+         <required>False</required>
+    </Field>
     <Field name="documents" type="plone.namedfile.field.NamedBlobFile">
       <Title>Documents</Title>
       <Description>Upload relevant documents here.</Description>
