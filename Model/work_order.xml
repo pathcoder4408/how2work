@@ -1,10 +1,12 @@
 <Model xmlns="http://namespaces.plone.org/supermodel/schema">
   <Schema>
     <Field name="assignee" type="plone.app.textfield.RichText">
+      <Title>Assignee</Title>
       <Description>The user assigned to complete the work order.</Description>
       <Required>True</Required>
     </Field>
     <Field name="duty_description" type="plone.app.textfield.RichText">
+      <Title>Duty Description</Title>
       <Description>A detailed description of the duties involved.</Description>
       <Required>True</Required>
     </Field>
@@ -17,7 +19,9 @@
     <Field name="recurrence" type="plone.app.event.dx.behaviors.IRecurrence">
       <Title>Recurrence</Title>
     </Field>
-
-    ...
+    <Field name="documents" type="plone.namedfile.field.NamedBlobFile">
+      <Title>Documents</Title>
+      <Description>Upload relevant documents here.</Description>
+    </Field>
   </Schema>
 </Model>
