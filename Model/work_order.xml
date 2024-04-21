@@ -1,0 +1,13 @@
+<Model xmlns="http://namespaces.plone.org/supermodel/schema">
+  <Schema>
+    <Field name="assignee" type="plone.app.textfield.RichText">
+      <Description>The user assigned to complete the work order.</Description>
+      <Required>True</Required>
+    </Field>
+    <Field name="duty_description" type="plone.app.textfield.RichText">
+      <Description>A detailed description of the duties involved.</Description>
+      <Required>True</Required>
+    </Field>
+    ...
+  </Schema>
+</Model>
